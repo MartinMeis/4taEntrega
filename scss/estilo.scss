@@ -1,0 +1,279 @@
+$colorTitulo: #666633;
+$tamañoTitulo: 35px;
+$fuenteTitulo: Josefin Sans;
+
+$tamañoparrafos: 18px;
+$fuenteparrafo: candara;
+$interlineadoparrafo: 25px;
+$alineacionparrafo: justify;
+
+/*Operaciones imágenes*/
+$ancho:350px;
+
+/*mixin alto ancho*/
+@mixin altoAncho ($width, $height) {
+   height: $height;
+   width: $width;
+   }
+
+body{
+	background-color: #ddff99;
+	margin: 3px;
+}
+
+/*scss del header*/
+.header{
+   	background-color: #e5592e;
+   	background-image: linear-gradient(to bottom, rgba(255,255,255,.3), rgba(255,255,255,0));  	
+}
+nav{ 
+	background-color: #e5592e;
+   	background-image: linear-gradient(to bottom, rgba(255,255,255,.3), rgba(255,255,255,0));
+   	margin: 0px;
+}
+
+nav ul { 
+	margin: 0px 5px 0px 65px;
+		li a { 
+				color: #e6e6ff; 
+				line-height: 30px;
+				font-family: Manrope;
+				font-size: 20px;
+				text-decoration: none;
+				margin-right: 35px; 
+			}
+}
+.submenu {
+	background-color: #e5592e;
+	background-image: linear-gradient(to bottom, rgba(255,255,255,.3), rgba(255,255,255,0));
+	margin: 0px;
+		a {
+   			color: #e6e6ff;
+		  }
+}
+
+/*css de footer*/
+footer{ 
+	background-image: url(https://4.bp.blogspot.com/-lwKEWM1wmoo/UAMLMMPu6mI/AAAAAAAACJY/dd-clVhnN2s/s400/titulo%2Bvisible%2Bblog%2B2012%2Bc.png);
+	background-repeat:no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: #ff8533;
+}
+.footer__redesSociales{
+	display: flex; 
+	flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 23px;
+    	#subir {
+				color: white; 
+				font-size: 20px;
+				font-family: Book Antiqua;
+				margin-left: 20px;
+				}
+}
+.redesSociales__imagen{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	margin: 10px 75px 0px 0px;
+}
+
+/*css de carrusel*/
+.carousel{
+	margin-top: 10px;
+}
+
+/*scss Index*/
+.peuhec__titulo{
+	color: $colorTitulo; 
+	font-size: $tamañoTitulo;
+	font-family: $fuenteTitulo; 
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+.parrafo__Index{
+	font-size: $tamañoparrafos; 
+	line-height: $interlineadoparrafo;
+	font-family: $fuenteparrafo;
+	text-align: $alineacionparrafo;	
+}
+#imagenIndex{
+	transform: scale(1.14,1.5);
+	margin-top: 50px;
+	padding-top: 50px;
+}
+
+/*scss de NuestrosObjetivos*/
+.titulo__Objetivos{
+	color: $colorTitulo; 
+	font-size: $tamañoTitulo;
+	font-family: $fuenteTitulo; 
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+	text-align:  center;
+}
+.texto__Objetivos{
+	font-size: $tamañoparrafos; 
+	line-height: $interlineadoparrafo;
+	font-family: $fuenteparrafo;
+	text-align: $alineacionparrafo;
+	padding-top: 15px;
+	align-items: center;
+	padding-top: 90px;
+}
+/*scss de NuestroLibro*/
+.titulo__NuestroLibro{
+	color: $colorTitulo; 
+	font-size: $tamañoTitulo;
+	font-family: $fuenteTitulo; 
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+#imagen__NuestroLibro{
+	text-align: center;
+		.imagen__NuestroLibro--tamaño{
+			@include altoAncho (360px, 500px)
+		}
+}
+
+/*Css de Proyectos*/
+#grillaProyectos{
+	display: grid;
+	grid-template-areas: 
+	"headerProyectos navProyectos navProyectos"
+	"tituloProyectos tituloProyectos tituloProyectos"
+	"tablaProyectos tablaProyectos tablaProyectos"
+	"footerProyectos footerProyectos footerProyectos";
+	grid-template-rows: 80px 90px auto 100px ;
+	grid-template-columns: 42% 30% auto;
+}
+#headerProyectos{
+	grid-area: headerProyectos;
+}
+#navProyectos{
+	grid-area: navProyectos;
+}
+#tituloProyectos{
+	grid-area: tituloProyectos;
+	color: #4a4a34; 
+	font-size: 35px;
+	font-family: Josefin Sans; 
+	text-align:  center;
+	text-decoration: underline;
+	margin-top: 20px; 
+}
+#tablaProyectos{
+	grid-area: tablaProyectos;
+	font-family: candara;
+	margin-left: 50px;
+}
+#footerProyectos{
+	grid-area: footerProyectos;
+}
+
+/*Css de Contacto*/
+#grillaContacto{
+	display: grid;
+	grid-template-areas: 
+	"headerContacto navContacto navContacto"
+	"tituloContacto tituloContacto tituloContacto"
+	"formularioContacto formularioContacto formularioContacto"
+	"footerContacto footerContacto footerContacto";
+	grid-template-rows: 80px 90px auto 90px;
+	grid-template-columns: 42% 30% auto;
+}
+#headerContacto{
+	grid-area: headerContacto;
+}
+#navContacto{
+	grid-area: navContacto;
+}
+#tituloContacto{
+	grid-area: tituloContacto;
+	font-family: Josefin Sans;
+	margin: 30px 0px 0px 15px; 
+	text-align: center;
+	color: #4a4a34;
+}
+#formularioContacto{
+	grid-area: formularioContacto;
+	text-align: center;
+	margin-bottom: 10px;
+	font-family: candara;
+
+}
+#footerContacto{
+	grid-area: footerContacto;
+}
+input{ 
+	width: 100px; height: 30px;
+   transition: all 2s;       
+}
+input:focus {
+   width: 250px;
+   font-size: 20px;
+}
+
+@media (max-width: 768px){
+ /*mquery footer*/
+ 	footer{ 
+		grid-area: PiePag;
+		background-image: none;
+		background-color: #ff8533;
+ 		}
+ 			.footer__redesSociales{
+				font-size: 80%;
+				}
+					.redesSociales__imagen{
+						margin: 0px;
+						padding: 0px;
+						transform: scale(0.8, 0.8);
+						}
+
+/*mquery index*/
+ 	.peuhec__titulo{
+ 		font-size: 150%;
+ 	}
+ 	#imagenIndex{
+		transform: scale(1,1);
+		margin: 0px;
+		padding-top: 0px;	
+	}
+/*mquery NuestrosObjetivos*/
+	.titulo__Objetivos{
+		font-size: 150%;
+	}
+	.texto__Objetivos{
+		padding: 0px;
+	}
+/*mquery NuestroLibro*/
+	.titulo__NuestroLibro{
+		font-size: 150%;
+	}
+	.linkLibro{
+		font-size: 130%;
+	}
+/*mquery proyectos*/
+	.tituloProyectos{
+		font-size: 70%;
+	}
+	#tablaProyectos{
+		margin: 0px;
+	}
+/*mquery contacto*/
+	#formularioContacto{
+		margin: 0px 5px 0px 5px;
+	}
+
+}
+
+
+
