@@ -1,9 +1,9 @@
 $colorTitulo: #666633;
 $tamañoTitulo: 35px;
-$fuenteTitulo: Josefin Sans;
+$fuenteTitulo: "Josefin Sans";
 
 $tamañoparrafos: 18px;
-$fuenteparrafo: candara;
+$fuenteparrafo: "candara";
 $interlineadoparrafo: 25px;
 $alineacionparrafo: justify;
 
@@ -26,6 +26,12 @@ body{
    	background-color: #e5592e;
    	background-image: linear-gradient(to bottom, rgba(255,255,255,.3), rgba(255,255,255,0));  	
 }
+.logo--tamaño{
+	width: 60px;
+}
+.nombre__header--tamaño{
+	width: 140px;
+}
 nav{ 
 	background-color: #e5592e;
    	background-image: linear-gradient(to bottom, rgba(255,255,255,.3), rgba(255,255,255,0));
@@ -37,7 +43,7 @@ nav ul {
 		li a { 
 				color: #e6e6ff; 
 				line-height: 30px;
-				font-family: Manrope;
+				font-family: "Manrope";
 				font-size: 20px;
 				text-decoration: none;
 				margin-right: 35px; 
@@ -69,7 +75,7 @@ footer{
     	#subir {
 				color: white; 
 				font-size: 20px;
-				font-family: Book Antiqua;
+				font-family: "Book Antiqua";
 				margin-left: 20px;
 				}
 }
@@ -78,6 +84,9 @@ footer{
 	flex-direction: row;
 	justify-content: flex-end;
 	margin: 10px 75px 0px 0px;
+}
+.redesSociales__imagen--tamaño{
+	width: 40px;
 }
 
 /*css de carrusel*/
@@ -105,6 +114,9 @@ footer{
 	transform: scale(1.14,1.5);
 	margin-top: 50px;
 	padding-top: 50px;
+}
+.imagenIndex--tamaño{
+	width: 100%;
 }
 
 /*scss de NuestrosObjetivos*/
@@ -165,14 +177,14 @@ footer{
 	grid-area: tituloProyectos;
 	color: #4a4a34; 
 	font-size: 35px;
-	font-family: Josefin Sans; 
+	font-family: "Josefin Sans"; 
 	text-align:  center;
 	text-decoration: underline;
 	margin-top: 20px; 
 }
 #tablaProyectos{
 	grid-area: tablaProyectos;
-	font-family: candara;
+	font-family: "candara";
 	margin-left: 50px;
 }
 #footerProyectos{
@@ -198,7 +210,7 @@ footer{
 }
 #tituloContacto{
 	grid-area: tituloContacto;
-	font-family: Josefin Sans;
+	font-family: "Josefin Sans";
 	margin: 30px 0px 0px 15px; 
 	text-align: center;
 	color: #4a4a34;
@@ -207,7 +219,7 @@ footer{
 	grid-area: formularioContacto;
 	text-align: center;
 	margin-bottom: 10px;
-	font-family: candara;
+	font-family: "candara";
 
 }
 #footerContacto{
